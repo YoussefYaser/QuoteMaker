@@ -1,0 +1,3 @@
+Name   : youssef yasser mohammed hussein
+Group  : Web C43 Sat&Tues 8PM Online
+Subject: Assignment 8 js quote generator

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuoteMaker</title>
+
+
+    <!-- start bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- end bootstrap -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <div class="page min-vh-100 py-5 py-lg-0">
+        <div class="container text-center">
+            <div class="caption pt-5 ">
+                <h1 class="fw-bold mb-4 text-light">Quote of the Day</h1>
+                <p class="fs-4 text-muted">Press the button below to recieve a random quote!</p>
+                <div class="btn-style w-fit m-auto my-5 position-relative z-0">
+                    <button id="quoteChanger"
+                        class="btn text-capitalize text-white  fw-bold border border-1 rounded-1 px-5 py-3 fs-4  position-relative">new
+                        quote</button>
+                </div>
+                <div class="quote  row gy-4 gy-lg-0 p-3 ">
+                    <div class="col-lg-10 pe-0 pe-lg-4">
+                        <p class="fs-3" id="quote-text">
+                            “I think you actually have to have all of your dreams come true to realize they are the
+                            wrong dreams.”
+                        </p>
+                        <span class="fs-4" id="quoter">― Matthew Perry</span>
+                    </div>
+                    <div class="col-lg-2 p-0 position-relative">
+                    
+                        <div class="flip m-auto rounded-2 overflow-hidden">
+                            <div class="card position-relative z-0">
+                                <div class="w-100 h-100 text-capitalize">
+                                    <img src="images/america.png" class="position-absolute w-100 start-0 top-0 z-n1"
+                                        alt="" id="cardImg">
+                                    <div class="text-white w-100 h-100 p-2 d-flex flex-column justify-content-center" id="card-info">
+                                        Born:
+                                        <span class="d-block mb-3">
+                                            in Williamstown, Massachusetts, US August 19, 1969
+                                        </span>
+                                        Died:
+                                        <span class="d-block">
+                                            October 28, 2023
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="images/Matthew Perry.jpg" id="quoter-img" class="w-100 object-fit-cover"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

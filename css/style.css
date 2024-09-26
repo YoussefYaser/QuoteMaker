@@ -1,0 +1,138 @@
+*::selection{
+    background-color: #F56040;
+    color: #ffffff;
+}
+
+
+.w-fit{
+    width: fit-content;
+}
+
+
+.page{
+    background: radial-gradient(at top left ,#f59cf5, transparent), 
+    radial-gradient(at top right, yellow, transparent), 
+    radial-gradient(at bottom, orange, transparent);
+    background-size: 150% 120%;
+    background-position: 0% 0%;
+    animation-name: color-move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes color-move{
+    100%{
+        background-position: 100% 100%;
+    }
+}
+
+.page h1{
+    font-size: 4rem;
+    text-shadow: 0 0 10px #808080b0;
+}
+
+.page .btn{
+    /* background: linear-gradient(to bottom right, #fcb04580, #f56140ad, #e1306b, #c13584, #833AB4, #5a51d8ae, #405ce6c7); */
+    /* background-color: rgb(64, 64, 64); */
+    background-color: #423aa8;
+    transition: 1s;
+}
+
+.page .btn-style{
+    transition: 0.5s;
+}
+
+.page .btn-style:hover{
+    transform: scale(1.1);
+}
+
+.page .btn::before{
+    content: '';
+    position: absolute;
+    width: 106%;
+    height: 120%;
+    background: conic-gradient(from var(--a), #E1306C 25%, transparent 25%, transparent 50%,#F56040 50%, #F56040 75%,transparent 75%);
+    left: -3%;
+    top: -10%;
+    border-radius: inherit;
+    z-index: -1;
+    animation-name: angle-backward;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.page .btn:hover:before{
+    animation-name: angle-forward;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes angle-forward{
+    0%{
+        --a: 0deg;
+    }
+    100%{
+        --a: 90deg;
+    }
+}
+
+@keyframes angle-backward{
+    0%{
+        --a: 90deg;
+    }
+    100%{
+        --a: 0deg;
+    }
+}
+
+
+@property --a{
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.page .quote img{
+    aspect-ratio: 200 / 229;
+}
+
+@media(max-width: 992px){
+    .page .quote > div:nth-child(2) > div:nth-of-type(1){
+        width: 35% !important;
+    }
+}
+
+
+.page .quote > div:nth-child(2) .flip .card > div{
+    background-color: rgba(255, 0, 0, 0.562);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: rotateY(180deg);
+}
+
+.page .quote > div:nth-child(2) .flip .card > div div{
+    background-color: rgba(0, 0, 0, 0.674);
+}
+
+.page .quote > div:nth-child(2) .flip .card > div span{
+    font-size: 0.8125rem;
+}
+
+.page .quote .card{
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+.page .quote .card #quoter-img{
+    backface-visibility: hidden;
+}
+
+.page .quote .flip:hover .card{
+    transform: rotateY(180deg);
+}
